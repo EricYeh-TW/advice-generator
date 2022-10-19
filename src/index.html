@@ -8,10 +8,20 @@
   </head>
   <body>
     <div class="container-fluid vh-100 d-flex bg-dark2 p-0 m-0 justify-content-center align-items-center flex-column">
-      <div class="w-95 h-95 bg-dark1 rounded-4 ps-5 pe-5 position-relative" style="max-width: 545px; max-height: 325px">
+      <div
+        class="w-95 h-auto bg-dark1 rounded-4 ps-3 pe-3 ps-sm-5 pe-sm-5 position-relative shadow"
+        style="max-width: 545px; min-height: 325px"
+      >
         <h3 id="advice__id" class="fs-6 text-secondary text-center mt-5 mb-4" style="letter-spacing: 0.2rem"></h3>
-        <p id="advice" class="text-primary text-center fs-4"></p>
-        <img src="./images/pattern-divider-desktop.svg" alt="divider" />
+        <p id="advice" class="text-primary text-center fs-4 mb-4"></p>
+        <picture>
+          <source media="( min-width:444px )" srcset="./images/pattern-divider-desktop.svg" type="image/svg+xml" />
+          <img
+            src="./images/pattern-divider-mobile.svg"
+            alt="divider"
+            class="img-fluid mb-5 position-relative start-50 translate-middle"
+          />
+        </picture>
         <button
           type="button"
           id="dice"
@@ -26,7 +36,12 @@
         </button>
       </div>
       <footer class="text-center fw-light position-absolute bottom-0 mb-3">
-        <a href="#" class="text-secondary text-decoration-none">Coded by Eric Yeh</a>
+        <a
+          href="https://github.com/EricYeh-TW/advice-generator"
+          target="_blank"
+          class="text-secondary text-decoration-none"
+          >Coded by Eric Yeh</a
+        >
       </footer>
     </div>
     <script src="./js/main.js"></script>
