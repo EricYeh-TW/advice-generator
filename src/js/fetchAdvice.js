@@ -1,9 +1,7 @@
-import '../scss/styles.scss';
-
 let dice = document.querySelector('#dice');
 let cache;
 
-async function fetchAdvice() {
+export async function fetchAdvice() {
   const advice__id = document.querySelector('#advice__id');
   const content = document.querySelector('#advice');
   const url = 'https://api.adviceslip.com/advice';
@@ -15,7 +13,7 @@ async function fetchAdvice() {
     let { id, advice } = result.slip;
     if (cache === id) return;
     // console.log('oldId: ' + cache, 'newId: ' + id);
-    // console.log(cache === id);
+    console.log(cache === id);
 
     advice__id.innerHTML = `ADVICE #${id}`;
     content.innerHTML = advice;
@@ -27,4 +25,3 @@ async function fetchAdvice() {
 }
 
 dice.addEventListener('click', fetchAdvice);
-fetchAdvice();
