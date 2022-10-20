@@ -13,7 +13,7 @@ export async function fetchAdvice() {
     let { id, advice } = result.slip;
     if (cache === id) return;
     // console.log('oldId: ' + cache, 'newId: ' + id);
-    console.log(cache === id);
+    // console.log(cache === id);
 
     advice__id.innerHTML = `ADVICE #${id}`;
     content.innerHTML = advice;
